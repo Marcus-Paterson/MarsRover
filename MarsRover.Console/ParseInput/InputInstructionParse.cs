@@ -19,7 +19,14 @@ namespace MarsRover_Console.ParseInput
                 instructions.Add(instruction);
             }
 
-            return instructions;
+            if(input.Contains("L") || input.Contains("R") || input.Contains("M"))
+            {
+                return instructions;
+            }
+            else
+            {
+                throw new Exception("Invalid instruction. Please enter a valid instruction (L, R, M).");
+            }
         }
 
     }
