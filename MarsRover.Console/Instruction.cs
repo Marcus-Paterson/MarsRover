@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MarsRover.Tests
+namespace MarsRover_Console
 {
     internal enum Instruction
     {
