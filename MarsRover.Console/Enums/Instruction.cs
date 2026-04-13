@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MarsRover_Console
+namespace MarsRover_Console.Enums
 {
-    internal enum Instruction
+    public enum Instruction
     {
         L,
         R,
