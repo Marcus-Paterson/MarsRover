@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MarsRover_Console.ParseInput
 {
-    internal class PlateauInputParse
+    internal class InputPlateauSizeParse
     {
         public static PlateauSize ParsePlateauSize(string input)
         {

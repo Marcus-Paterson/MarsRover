@@ -16,7 +16,7 @@ namespace MarsRover_Console.Parsers
             string[] splitString = input.Split(' '); 
             int positionX = int.Parse(splitString[0]);
             int positionY = int.Parse(splitString[1]);
-            CompassDirection positionDirection = (CompassDirection)Enum.Parse(typeof,splitString[2]); 
+            CompassDirection positionDirection = (CompassDirection)Enum.Parse(typeof (CompassDirection),splitString[2]); 
 
             RoverPosition roverPosition = new RoverPosition(positionX, positionY, positionDirection);
 
