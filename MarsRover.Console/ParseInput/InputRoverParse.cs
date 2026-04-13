@@ -8,15 +8,12 @@ using System.Threading.Tasks;
 
 namespace MarsRover_Console.Parsers
 {
-    public class InputRoverParser
+    public class InputRoverParse
     {
         public static RoverPosition ParseStartingPosition(string input)
         {
             // "5 5 N"
-            string[] splitString = input.Split(' ');
-            //5
-            //5
-            //N
+            string[] splitString = input.Split(' '); 
             int positionX = int.Parse(splitString[0]);
             int positionY = int.Parse(splitString[1]);
             CompassDirection positionDirection = (CompassDirection)Enum.Parse(typeof,splitString[2]); 
