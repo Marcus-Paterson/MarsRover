@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace MarsRover_Console.DataClasses
 {
-    public class Position
+    public class RoverPosition
     {
         public int X { get; }
         public int Y { get; }
         public CompassDirection DirectionFacing { get; }
 
-        public Position(int x, int y, CompassDirection directionFacing)
+        public RoverPosition(int x, int y, CompassDirection directionFacing)
         {
             X = x;
             Y = y;
