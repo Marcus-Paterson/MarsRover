@@ -11,7 +11,7 @@ namespace MarsRover_Console.ParseInput
     {
         public static List<Instruction> ParseInstructions(string input)
         {
-            List<Instruction> listOfInstructions = new List<Instruction>();
+            List<Instruction> listOfInstructions = new();
 
             foreach (char i in input)
             {
