@@ -4,7 +4,7 @@ using MarsRover_Console.Parsers;
 
 namespace MarsRover_Console
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -18,7 +18,7 @@ namespace MarsRover_Console
 
 /*            Console.WriteLine("Enter the rover's initial position and direction. Do this by entering two numbers under or equal to 5 and a direction(N,E,S or W) seperate everything with a space, e.g. 1 2 N):");
             string userRoverPositionInput = Console.ReadLine();*/
-            InputRoverParse.ParseStartingPosition("1 2 N");
+            var roverPosition = InputRoverParse.ParseStartingPosition("1 2 N");
 
             try 
             {
@@ -32,7 +32,7 @@ namespace MarsRover_Console
             }
 
             Console.WriteLine("Plateau size: " + plateauSize.X + " " + plateauSize.Y);
-            Console.WriteLine("Rover position: " + InputRoverParse.ParseStartingPosition("1 2 N").X + " " + InputRoverParse.ParseStartingPosition("1 2 N").Y + " " + InputRoverParse.ParseStartingPosition("1 2 N").DirectionFacing);
+            Console.WriteLine($"Rover starting position is: X: {roverPosition.X}, Y: {roverPosition.Y}, DirectionFacing: {roverPosition.DirectionFacing}");
             Console.WriteLine("Instructions: ");
             foreach (var instruction in InputInstructionParse.ParseInstructions("LMLMMLLMMMR"))
             {
