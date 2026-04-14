@@ -13,7 +13,7 @@ namespace MarsRover_Console.Logic
         public int Y { get; private set; } = y;
         public CompassDirection DirectionFacing { get; private set; } = directionFacing;
 
-        public void TurnLeft()
+        public void RotateLeft()
         {
             DirectionFacing = DirectionFacing switch
             {
@@ -24,7 +24,7 @@ namespace MarsRover_Console.Logic
             };
         }
 
-        public void TurnRight()
+        public void RotateRight()
         {
             DirectionFacing = DirectionFacing switch
             {
