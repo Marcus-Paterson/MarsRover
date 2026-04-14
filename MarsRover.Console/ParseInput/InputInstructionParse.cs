@@ -11,17 +11,21 @@ namespace MarsRover_Console.ParseInput
     {
         public static List<Instruction> ParseInstructions(string input)
         {
-            List<Instruction> instructions = new List<Instruction>();
+            List<Instruction> listOfInstructions = new List<Instruction>();
 
             foreach (char i in input)
             {
-                Instruction instruction = (Instruction)Enum.Parse(typeof(Instruction), i.ToString());
-                instructions.Add(instruction);
+                if(i is 'L' || i is 'R' || i is 'M')
+                {
+                    Instruction instruction = (Instruction)Enum.Parse(typeof(Instruction), i.ToString());
+                    listOfInstructions.Add(instruction);
+                }
+                
             }
 
-            if(input.Contains("L") || input.Contains("R") || input.Contains("M"))
+            if(listOfInstructions.Count != 0)
             {
-                return instructions;
+                return listOfInstructions;
             }
             else
             {
