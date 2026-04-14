@@ -25,7 +25,7 @@ namespace MarsRover_Console.ParseInput
             }
             else
             {
-                throw new Exception("Invalid instruction. Please enter a valid instruction (L, R, M).");
+                throw new ArgumentException("Invalid instruction. Please enter a valid instruction (L, R, M).");
             }
         }
 

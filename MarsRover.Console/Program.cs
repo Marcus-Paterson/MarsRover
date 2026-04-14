@@ -23,6 +23,15 @@ namespace MarsRover_Console
             string userInstructionInput = Console.ReadLine();
             InputInstructionParse.ParseInstructions(userInstructionInput);
 
+
+            try 
+            {
+                InputInstructionParse.ParseInstructions(" ");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
